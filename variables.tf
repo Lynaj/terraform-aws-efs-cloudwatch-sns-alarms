@@ -1,3 +1,7 @@
+terraform {
+  experiments = [variable_validation]
+}
+
 variable "additional_endpoint_arns" {
   description = "Any alert endpoints, such as autoscaling, or app escaling endpoint arns that will respond to an alert"
   default     = []
