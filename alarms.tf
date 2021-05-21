@@ -22,7 +22,7 @@ resource "aws_cloudwatch_metric_alarm" "burst_credit_balance_too_low" {
   alarm_actions       = ["${local.endpoints}"]
   ok_actions          = ["${local.endpoints}"]
 
-  dimensions {
+  dimensions = {
     FileSystemId = "${var.filesystem_id}"
   }
 }
@@ -40,7 +40,7 @@ resource "aws_cloudwatch_metric_alarm" "percent_io_limit_too_high" {
   alarm_actions       = ["${local.endpoints}"]
   ok_actions          = ["${local.endpoints}"]
 
-  dimensions {
+  dimensions = {
     FileSystemId = "${var.filesystem_id}"
   }
 }
